@@ -2,6 +2,8 @@
  * Create a Backpack object.
  */
 
+// const { clearConfigCache } = require("prettier");
+
 const backpack = {
   name: "Everyday Backpack",
   volume: 30,
@@ -20,3 +22,9 @@ const backpack = {
     this.strapLength.right = lengthRight;
   },
 };
+
+console.log("The backpack object:", backpack);
+console.log("Strap length left:", backpack.strapLength.left);
+// console.log("The pocket value:", backpack.pocketNum);
+
+console.log("The pocket value:", backpack["pocketNum"]);
