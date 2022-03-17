@@ -12,6 +12,7 @@ export default class Book {
     let published = new Date(this.publishedOn);
     let elapsed = now - published; // elapsed time in milliseconds
     let daysSincePublished = Math.floor(elapsed / (1000 * 3600 * 24));
-    return daysSincePublished;
+    let yearsSincePublished = now.getFullYear() - published.getFullYear();
+    return { daysSincePublished, yearsSincePublished };
   }
 }
