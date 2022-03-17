@@ -6,3 +6,36 @@
  * - Create several objects using the class.
  * - Test the objecs by calling their properties and using their methods in the console.
  */
+import Backpack from "./Backpack.js";
+//import Desk from "./Desk.js";
+import Book from "../../03_15/Book.js";
+
+const everydayPack = new Backpack(
+  "Everyday Backpack",
+  30,
+  "grey",
+  15,
+  26,
+  26,
+  false,
+  "December 5, 2018 15:00:00 PST"
+);
+
+console.log("The everydayPack object:", everydayPack);
+console.log("The pocketNum value:", everydayPack.pocketNum);
+
+const littleHouseOnThePrairie = new Book(
+  " Little House On The Prairie",
+  "Laura Ingalls Wilder",
+  "May 11, 2004 00:00:00 UTC",
+  " HarperCollins",
+  "fiction",
+  "paper back"
+);
+
+console.log(
+  "The Little House On The Prairie book object:",
+  littleHouseOnThePrairie
+);
+console.log("Date published:", littleHouseOnThePrairie.publishedOn);
+console.log("Days since published:", littleHouseOnThePrairie.bookAge());
